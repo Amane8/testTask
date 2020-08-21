@@ -1,0 +1,242 @@
+$mainColor : #1b90b1;
+$mainColorLight : #35d3ff;
+$mainColorDark: #0b80a1;
+$darkColor: #404040;
+$lightColor: #d1d1d1;
+$extraLightColor : #ebebeb;
+
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: Martel, serif;
+  background-color: $lightColor;
+  color: white;
+}
+
+#loginScreenStyle {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  font-size: 1.3rem;
+  
+  #loginFormStyle {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    background-color: $darkColor;
+    border-radius: 15px;
+
+    input {
+      padding: 8px;
+      margin: 10px 0px;
+    }
+
+    button {
+      height: 40px;
+      margin-top: 10px;
+      background-color: $mainColorDark;
+      border: none;
+      font-family: Martel, serif;
+      font-size: 1.3rem;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        border: 2px solid $mainColorLight;
+      }
+    }
+  }
+}
+
+#mainPage {
+  display: flex;
+  // background-color: $lightColor;
+
+  #sidebar {
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $darkColor;
+  
+    img {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      padding: 20px;
+    }
+  
+    #sidebarLinks {
+  
+      margin-top: 40px;
+  
+      a {
+        display: block;
+        height: 5rem;
+        width: 12rem;
+        margin: 10px 0px 10px 0px;
+        border-left: 3px solid $mainColorLight;
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 5rem;
+        text-decoration: none;
+        color: inherit;
+        transition: 0.4s;
+  
+        &:hover {
+          background-color: $mainColor;
+          border-left: 3px solid $mainColor;
+        }
+      }
+    }
+  
+    footer {
+      margin: auto auto 10px auto;
+    }
+  }
+
+  #content {
+    margin: 50px;
+    color: black;
+
+    #addTerminal {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.3rem;
+
+      input {
+        height: 35px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid $mainColorDark;
+        background-color: $extraLightColor;
+      }
+
+      textarea {
+        height: 80px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $mainColorDark;
+        background-color: $extraLightColor;
+      }
+
+      button {
+        border: none;
+        height: 40px;
+        background-color: $mainColor;
+        font-size: 1.2rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      * {
+        padding: 5px;
+        width: 300px;
+        border: none;
+      }
+    }
+
+    table {
+      margin-top: 80px;
+      min-width: 800px;
+      background-color: $extraLightColor;
+      border-collapse: collapse;
+
+      thead {
+        border-bottom: 2px solid black;
+      }
+
+      th {
+        padding-left: 15px;
+        text-align: center;
+        font-size: 1.3rem;
+      }
+
+      th:first-child {
+        width: 250px;
+      }
+
+      tr {
+        height: 40px;
+        box-sizing: border-box;
+      }
+
+      td {
+        padding: 10px;
+        border: 'solid 1px gray';
+        text-align: center;
+      }
+
+      button {
+        width: 70px;
+        height: 70px;
+        margin-left: 20px;
+        background-color: #ffbbba;
+        background-image: url(https://img.icons8.com/wired/128/000000/trash.png);
+        background-position: center;
+        background-size: cover;
+
+        &:hover {
+          background-color: #ff8180;
+        }
+      }
+
+      tr:nth-child(2n) {
+        background-color: #aad6ff;
+      }
+
+      a {
+        color: black;
+
+        &:visited {
+          color: black;
+        }
+      }
+    }
+
+    #userInfo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba($darkColor, 0.7);
+    }
+  }
+}
+
+#page404 {
+  
+  display: flex;
+  justify-content: center;
+  background: white;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+  }
+}
+
+@media (max-width: 640px) {
+  #sidebar {
+    max-width: 100px;
+
+    img {
+      max-height: 90px;
+      max-width: 90px;
+      padding: 0px !important;
+    }
+
+    a {
+      max-height: 6rem;
+      max-width: 6rem;
+      font-size: 1rem !important;
+    }
+  }
+}
